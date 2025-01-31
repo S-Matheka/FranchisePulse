@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, BookOpen, Settings, HelpCircle, FileText, UserCircle, LineChart, LogOut } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Settings, HelpCircle, FileText, UserCircle, Store, LogOut } from 'lucide-react';
 
 interface SidebarProps {
   onPageChange: (page: string) => void;
@@ -29,21 +29,9 @@ export const Sidebar = ({
       isPrimary: true 
     },
     { 
-      icon: <LineChart />, 
-      label: 'sales leader', 
-      title: 'Sales Leader', 
-      type: 'page' 
-    },
-    { 
-      icon: <LineChart />, 
-      label: 'sales associate', 
-      title: 'Sales Associate', 
-      type: 'page' 
-    },
-    { 
-      icon: <LineChart />, 
-      label: 'marketing', 
-      title: 'Marketing', 
+      icon: <Store />, 
+      label: 'franchisees', 
+      title: 'Franchisees', 
       type: 'page' 
     },
     { 

@@ -2,7 +2,7 @@ import React from 'react';
 import { CallVolumeChart } from './charts/CallVolumeChart';
 import { CallDistributionChart } from './charts/CallDistributionChart';
 import { PeakHoursChart } from './charts/PeakHoursChart';
-import { CallTopicsChart } from './charts/CallTopicsChart';
+import { TrendingTopicsSection } from './sections/TrendingTopicsSection'; // Add this import
 
 interface MainChartsProps {
   isDarkMode: boolean;
@@ -22,8 +22,8 @@ export const MainCharts = ({ isDarkMode }: MainChartsProps) => {
       <div className={`${bgColor} rounded-xl shadow-sm p-6`}>
         <PeakHoursChart isDarkMode={isDarkMode} />
       </div>
-      <div className={`${bgColor} rounded-xl shadow-sm p-6`}>
-        <CallTopicsChart isDarkMode={isDarkMode} />
+      <div>
+        <TrendingTopicsSection isDarkMode={isDarkMode} />
       </div>
     </div>
   );

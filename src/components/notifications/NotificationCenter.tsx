@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bell, MessageSquare, Calendar, AlertCircle, X, TrendingUp, Clock } from 'lucide-react';
+import { Bell, MessageSquare, Calendar, AlertCircle, X, TrendingUp, Clock, Thermometer, PenTool as Tool, PhoneCall } from 'lucide-react';
 
 interface NotificationCenterProps {
   isDarkMode: boolean;
@@ -7,7 +7,7 @@ interface NotificationCenterProps {
 
 interface Notification {
   id: string;
-  type: 'message' | 'appointment' | 'alert' | 'performance';
+  type: 'service' | 'appointment' | 'alert' | 'performance';
   title: string;
   description: string;
   time: string;
@@ -19,13 +19,13 @@ interface Notification {
   };
 }
 
-// Real-time dashboard notifications
+// HVAC-specific real-time notifications
 const notifications: Notification[] = [
   {
     id: '1',
     type: 'alert',
-    title: 'High Priority Lead',
-    description: 'New website inquiry requires immediate attention - 2024 Honda Civic',
+    title: 'High Priority Service Lead',
+    description: 'New emergency heating repair request from North Denver area',
     time: 'Just now',
     read: false,
     priority: 'high'
@@ -33,36 +33,36 @@ const notifications: Notification[] = [
   {
     id: '2',
     type: 'performance',
-    title: 'Call Volume Spike',
-    description: 'Current call volume is 25% above average',
+    title: 'Service Call Volume Alert',
+    description: 'Heating service calls up 30% in the last hour',
     time: '2m ago',
     read: false,
     metric: {
-      value: '156',
-      trend: 25
+      value: '42',
+      trend: 30
     }
   },
   {
     id: '3',
     type: 'appointment',
-    title: 'Upcoming Test Drive',
-    description: 'Sarah Johnson - 2024 Honda Civic at 2:30 PM',
+    title: 'Scheduled Maintenance',
+    description: 'Furnace tune-up appointment confirmed for 2:30 PM',
     time: '5m ago',
     read: false
   },
   {
     id: '4',
-    type: 'message',
-    title: 'New Lead Response',
-    description: 'John Smith replied to your follow-up email',
+    type: 'service',
+    title: 'System Alert',
+    description: 'Multiple missed calls in North Denver region',
     time: '10m ago',
     read: false
   },
   {
     id: '5',
     type: 'alert',
-    title: 'Missed Call Follow-up',
-    description: '3 high-priority missed calls need attention',
+    title: 'Follow-up Required',
+    description: '3 customers waiting for Trane system quotes',
     time: '15m ago',
     read: true,
     priority: 'medium'
@@ -71,15 +71,15 @@ const notifications: Notification[] = [
 
 const getIcon = (type: Notification['type'], isDarkMode: boolean) => {
   const iconClasses = {
-    message: isDarkMode ? 'text-blue-400' : 'text-blue-500',
+    service: isDarkMode ? 'text-blue-400' : 'text-blue-500',
     appointment: isDarkMode ? 'text-green-400' : 'text-green-500',
     alert: isDarkMode ? 'text-red-400' : 'text-red-500',
     performance: isDarkMode ? 'text-purple-400' : 'text-purple-500'
   };
 
   switch (type) {
-    case 'message':
-      return <MessageSquare className={`w-5 h-5 ${iconClasses.message}`} />;
+    case 'service':
+      return <Tool className={`w-5 h-5 ${iconClasses.service}`} />;
     case 'appointment':
       return <Calendar className={`w-5 h-5 ${iconClasses.appointment}`} />;
     case 'alert':

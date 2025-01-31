@@ -4,60 +4,60 @@ import { X, Play, Pause, Volume2, FileText } from 'lucide-react';
 
 const dummyTranscript = {
   'sam-smith': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions, this is Mike speaking. How may I assist you today?' },
-    { time: '0:05', speaker: 'Customer', text: 'Hi, I\'ve been trying to schedule a service appointment for the past hour and your online system keeps giving me errors.' },
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv, this is Mike speaking. How may I assist you today?' },
+    { time: '0:05', speaker: 'Customer', text: "Hi, I've been trying to schedule a service appointment for my heater and your online system keeps giving me errors." },
     { time: '0:12', speaker: 'Agent', text: 'I apologize for the inconvenience. I can help you schedule that appointment right now.' },
     { time: '0:18', speaker: 'Customer', text: 'This is really frustrating. I\'ve tried multiple times and keep getting error messages.' },
-    { time: '0:25', speaker: 'Agent', text: 'I understand your frustration. Let me take care of this for you right away. What service did you need?' },
-    { time: '0:32', speaker: 'Customer', text: 'I need an oil change and tire rotation, but honestly, this scheduling process needs to be fixed.' },
-    { time: '0:38', speaker: 'Agent', text: 'You\'re absolutely right, and I\'ll make sure to report this issue. Let me find a convenient time for you.' }
+    { time: '0:25', speaker: 'Agent', text: 'I understand your frustration. Let me take care of this for you right away. What type of heating system do you have?' },
+    { time: '0:32', speaker: 'Customer', text: 'I need a furnace tune-up, but honestly, this scheduling process needs to be fixed.' },
+    { time: '0:38', speaker: 'Agent', text: "You're absolutely right, and I'll make sure to report this issue. Let me find a convenient time for your furnace tune-up." }
   ],
   'mary-berry': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions, this is Sarah speaking. How may I assist you today?' },
-    { time: '0:05', speaker: 'Customer', text: 'Hi, I have several questions about my new vehicle\'s features that weren\'t answered during delivery.' },
-    { time: '0:12', speaker: 'Agent', text: 'I\'ll try my best to help. What features did you have questions about?' },
-    { time: '0:18', speaker: 'Customer', text: 'Well, first the lane assist system - I can\'t figure out how to adjust its sensitivity.' },
-    { time: '0:25', speaker: 'Agent', text: 'Let me check that for you... I\'m actually not seeing that information readily available.' },
-    { time: '0:32', speaker: 'Customer', text: 'And what about the wireless charging? My phone doesn\'t seem to work with it.' },
-    { time: '0:38', speaker: 'Agent', text: 'I\'ll need to check with our technical team about that. Is there anything else?' },
-    { time: '0:45', speaker: 'Customer', text: 'Yes, the smart parking feature - I can\'t get it to work at all.' },
-    { time: '0:52', speaker: 'Agent', text: 'I\'ll need to look into these questions and get back to you. Can I have your contact information?' }
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv, this is Sarah speaking. How may I assist you today?' },
+    { time: '0:05', speaker: 'Customer', text: "Hi, I have several questions about my new HVAC system that weren't answered during installation." },
+    { time: '0:12', speaker: 'Agent', text: "I'll try my best to help. What questions do you have about your system?" },
+    { time: '0:18', speaker: 'Customer', text: "Well, first the smart thermostat - I can't figure out how to adjust its settings." },
+    { time: '0:25', speaker: 'Agent', text: "Let me check that for you... I'm actually not seeing that information readily available." },
+    { time: '0:32', speaker: 'Customer', text: 'And what about the air purification system? My allergies still seem bad.' },
+    { time: '0:38', speaker: 'Agent', text: "I'll need to check with our technical team about that. Is there anything else?" },
+    { time: '0:45', speaker: 'Customer', text: "Yes, the zoning system - I can't get it to work properly." },
+    { time: '0:52', speaker: 'Agent', text: "I'll need to look into these questions and get back to you. Can I have your contact information?" }
   ],
   'caller-2': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions, this is David speaking. How may I assist you today?' },
-    { time: '0:05', speaker: 'Customer', text: 'Hi David, I just had my car serviced at your dealership and I wanted to share my experience.' },
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv, this is David speaking. How may I assist you today?' },
+    { time: '0:05', speaker: 'Customer', text: 'Hi David, I just had my AC serviced at your company and I wanted to share my experience.' },
     { time: '0:12', speaker: 'Agent', text: 'We always appreciate feedback. How was your service experience?' },
     { time: '0:18', speaker: 'Customer', text: 'It was absolutely exceptional! Your service team went above and beyond.' },
     { time: '0:25', speaker: 'Agent', text: 'That\'s wonderful to hear! What impressed you the most?' },
-    { time: '0:32', speaker: 'Customer', text: 'The thoroughness of the service, the clear explanations, and how the team took extra time to show me everything they did.' },
+    { time: '0:32', speaker: 'Customer', text: 'The thoroughness of the service, the clear explanations, and how the team took extra time to show me maintenance tips.' },
     { time: '0:40', speaker: 'Agent', text: 'We\'re so glad you had such a positive experience. Our service team takes great pride in their work.' },
-    { time: '0:47', speaker: 'Customer', text: 'They should! It\'s the best service experience I\'ve ever had at any dealership.' }
+    { time: '0:47', speaker: 'Customer', text: "It's the best HVAC service experience I've ever had." }
   ],
   'marketing': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions, this is Jennifer speaking. How may I assist you today?' },
-    { time: '0:05', speaker: 'Customer', text: 'Hi Jennifer, I\'ve been coming to your dealership for 15 years now, and I wanted to share something.' },
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv, this is Jennifer speaking. How may I assist you today?' },
+    { time: '0:05', speaker: 'Customer', text: "Hi Jennifer, I've been coming to your company for 15 years now, and I wanted to share something." },
     { time: '0:12', speaker: 'Agent', text: 'We always love hearing from our long-time customers. What would you like to share?' },
     { time: '0:20', speaker: 'Customer', text: 'Your service quality has been consistently excellent all these years. It\'s why I keep coming back.' },
     { time: '0:28', speaker: 'Agent', text: 'Thank you so much! We really value our long-term relationships with customers like you.' },
     { time: '0:35', speaker: 'Customer', text: 'The way your team handles everything, from regular maintenance to major repairs, is just outstanding.' },
-    { time: '0:42', speaker: 'Agent', text: 'We\'re so glad to hear that. Have you heard about our customer loyalty program?' },
-    { time: '0:48', speaker: 'Customer', text: 'No, but I\'d love to learn more about it. And I\'ve been recommending you to everyone I know.' }
+    { time: '0:42', speaker: 'Agent', text: 'Have you heard about our preventive maintenance program?' },
+    { time: '0:48', speaker: 'Customer', text: "No, but I'd love to learn more about it. And I've been recommending you to everyone I know." }
   ],
   'sally-smith': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions, this is Alex speaking. How may I assist you today?' },
-    { time: '0:05', speaker: 'Customer', text: 'Hi, I\'m interested in the 2024 Honda Civic on your website and would like to know about financing options.' },
-    { time: '0:12', speaker: 'Agent', text: 'I\'d be happy to help you with information about the Civic and our financing options.' },
-    { time: '0:18', speaker: 'Customer', text: 'Great, I\'m specifically looking at the Sport trim.' },
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv, this is Alex speaking. How may I assist you today?' },
+    { time: '0:05', speaker: 'Customer', text: "Hi, I'm interested in the new Trane system I saw on your website and would like to know about financing options." },
+    { time: '0:12', speaker: 'Agent', text: "I'd be happy to help you with information about the Trane system and our financing options." },
+    { time: '0:18', speaker: 'Customer', text: "Great, I'm specifically looking at the high-efficiency model." },
     { time: '0:25', speaker: 'Agent', text: 'Excellent choice! We have some special financing rates available right now for qualified buyers.' },
     { time: '0:32', speaker: 'Customer', text: 'What kind of rates are you offering?' },
-    { time: '0:38', speaker: 'Agent', text: 'For the 2024 Civic Sport, we have rates starting at 2.9% APR for 60 months for qualified buyers.' },
+    { time: '0:38', speaker: 'Agent', text: 'For the Trane system, we have rates starting at 6.99% APR for 60 months for qualified buyers.' },
     { time: '0:45', speaker: 'Customer', text: 'That sounds good. Could you tell me about the down payment requirements?' }
   ],
   'jim-jones': [
-    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Creo Solutions Service Department, this is Mike speaking. How can I help you today?' },
+    { time: '0:00', speaker: 'Agent', text: 'Thank you for calling Aire Serv Service Department, this is Mike speaking. How can I help you today?' },
     { time: '0:05', speaker: 'Customer', text: 'Hi, I need to schedule a service appointment and have some questions about my warranty coverage.' },
     { time: '0:12', speaker: 'Agent', text: 'I can definitely help you with both. What type of service were you looking to schedule?' },
-    { time: '0:18', speaker: 'Customer', text: 'I need an oil change and tire rotation. Also, my warranty is expiring soon.' },
+    { time: '0:18', speaker: 'Customer', text: 'I need an AC tune-up and my warranty is expiring soon.' },
     { time: '0:25', speaker: 'Agent', text: 'Let me check our service availability first. For the warranty, I can look up extension options.' },
     { time: '0:32', speaker: 'Customer', text: 'Perfect, thank you.' },
     { time: '0:38', speaker: 'Agent', text: 'I have an opening tomorrow at 2:30 PM or Friday at 10:00 AM. Which works better?' },
@@ -138,16 +138,14 @@ export const CallViewModal = ({ isOpen, onClose, lead, type, isDarkMode = false 
                   {lead.phone}
                 </p>
               </div>
-              {type === 'review' && (
-                <div className="col-span-2">
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    Reason for Review
-                  </p>
-                  <p className={`font-medium text-green-500 ${isDarkMode ? 'text-opacity-90' : ''}`}>
-                    {lead.reason}
-                  </p>
-                </div>
-              )}
+              <div className="col-span-2">
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                  Reason for Review
+                </p>
+                <p className={`font-medium ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
+                  {lead.reason || 'Standard call review'}
+                </p>
+              </div>
             </div>
 
             <div>

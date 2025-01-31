@@ -196,8 +196,8 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80"
-            alt="Modern office interior"
+            src="https://unsplash.com/photos/8YG31Xn4dSw/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM4MjgzMzk3fA&force=true&w=1920"
+            alt="Happy professional in modern office"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50"></div>
           

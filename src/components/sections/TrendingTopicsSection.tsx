@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, ArrowUp } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 interface Topic {
   name: string;
@@ -8,11 +8,11 @@ interface Topic {
 }
 
 const topics: Topic[] = [
-  { name: 'Dealer Financing', count: 156, trend: 12 },
-  { name: 'May Service Promotion', count: 134, trend: 8 },
-  { name: 'Air bag recall', count: 89, trend: -5 },
-  { name: 'Trade-in Values', count: 76, trend: 15 },
-  { name: 'New Model Availability', count: 65, trend: 10 }
+  { name: 'Heater Service', count: 156, trend: 12 },
+  { name: 'Seasonal Promotion', count: 134, trend: 8 },
+  { name: 'Air Conditioning Maintenance', count: 89, trend: -5 },
+  { name: 'HVAC Financing', count: 76, trend: 15 },
+  { name: 'Trane Rebate', count: 65, trend: 10 }
 ];
 
 interface TrendingTopicsSectionProps {
@@ -34,36 +34,31 @@ export const TrendingTopicsSection = ({ isDarkMode }: TrendingTopicsSectionProps
           </h2>
         </div>
         <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-          Last 24 hours
+          Team Overview
         </span>
       </div>
 
-      <div className="p-4 space-y-6">
+      <div className="p-6 space-y-8">
         {topics.map((topic, index) => (
           <div key={index} className="space-y-2">
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <span className={`text-sm font-medium ${
-                  isDarkMode ? 'text-gray-200' : 'text-gray-900'
-                }`}>
-                  {topic.name}
-                </span>
-                <div className={`flex items-center space-x-1 text-xs ${
-                  topic.trend > 0 
-                    ? 'text-green-500' 
-                    : 'text-red-500'
-                }`}>
-                  <ArrowUp className={`w-3 h-3 ${
-                    topic.trend < 0 ? 'rotate-180' : ''
-                  }`} />
-                  <span>{Math.abs(topic.trend)}%</span>
-                </div>
-              </div>
-              <span className={`text-sm ${
-                isDarkMode ? 'text-gray-400' : 'text-gray-500'
+              <span className={`text-base font-medium ${
+                isDarkMode ? 'text-gray-200' : 'text-gray-900'
               }`}>
-                {topic.count} mentions
+                {topic.name}
               </span>
+              <div className="flex items-center space-x-4">
+                <span className={`text-base ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                }`}>
+                  {topic.count} mentions
+                </span>
+                <span className={`text-base ${
+                  topic.trend > 0 ? 'text-green-500' : 'text-red-500'
+                }`}>
+                  {topic.trend > 0 ? '+' : ''}{topic.trend}%
+                </span>
+              </div>
             </div>
 
             <div className="relative">
@@ -75,44 +70,30 @@ export const TrendingTopicsSection = ({ isDarkMode }: TrendingTopicsSectionProps
                     isDarkMode ? 'bg-blue-500' : 'bg-blue-600'
                   }`}
                   style={{ width: `${(topic.count / maxCount) * 100}%` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 rounded-full" />
-                </div>
+                />
               </div>
             </div>
           </div>
         ))}
-      </div>
 
-      <div className={`p-4 border-t ${
-        isDarkMode ? 'border-gray-700 bg-gray-800/50' : 'border-gray-100 bg-gray-50'
-      }`}>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-8 pt-4 mt-8 border-t border-gray-700">
           <div>
-            <h3 className={`text-sm font-medium mb-1 ${
-              isDarkMode ? 'text-gray-400' : 'text-gray-500'
-            }`}>
-              Top Topic
+            <h3 className="text-base text-gray-400 mb-2">
+              Most Discussed
             </h3>
-            <p className={`text-lg font-semibold ${
-              isDarkMode ? 'text-gray-200' : 'text-gray-900'
-            }`}>
-              Dealer Financing
+            <p className="text-xl font-semibold text-white mb-1">
+              Heater Service
             </p>
-            <p className="text-sm text-green-500">↑ 12% this week</p>
+            <p className="text-base text-green-500">↑ 12% this week</p>
           </div>
           <div>
-            <h3 className={`text-sm font-medium mb-1 ${
-              isDarkMode ? 'text-gray-400' : 'text-gray-500'
-            }`}>
-              Trending Topic
+            <h3 className="text-base text-gray-400 mb-2">
+              Fastest Growing
             </h3>
-            <p className={`text-lg font-semibold ${
-              isDarkMode ? 'text-gray-200' : 'text-gray-900'
-            }`}>
-              Trade-in Values
+            <p className="text-xl font-semibold text-white mb-1">
+              HVAC Financing
             </p>
-            <p className="text-sm text-green-500">↑ 15% this week</p>
+            <p className="text-base text-green-500">↑ 15% this week</p>
           </div>
         </div>
       </div>

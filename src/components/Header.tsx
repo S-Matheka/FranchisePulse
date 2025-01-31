@@ -1,9 +1,9 @@
 import React from 'react';
 import { Bell, Menu, Sun, Moon, RefreshCw, Sparkles } from 'lucide-react';
 import { Logo } from './Logo';
-import { LocationSelector } from './selectors/LocationSelector';
 import { DateRangeSelector } from './selectors/DateRangeSelector';
 import { NotificationCenter } from './notifications/NotificationCenter';
+import { AIAssistant } from './ai-assistant/AIAssistant';
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -36,7 +36,6 @@ export const Header = ({
           </button>
           <Logo isDarkMode={isDarkMode} />
           <div className="hidden md:flex items-center space-x-4">
-            <LocationSelector isDarkMode={isDarkMode} />
             <DateRangeSelector isDarkMode={isDarkMode} />
           </div>
         </div>
@@ -100,6 +99,12 @@ export const Header = ({
           </div>
         </div>
       </div>
+
+      <AIAssistant 
+        isOpen={showGenie}
+        onClose={() => setShowGenie(false)}
+        isDarkMode={isDarkMode}
+      />
     </header>
   );
 };
